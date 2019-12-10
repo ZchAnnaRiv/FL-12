@@ -1,3 +1,4 @@
+@media screen {
 .tm-main-nav ul li:hover{
     background: lightskyblue;
 }
@@ -140,6 +141,7 @@ section .tm-content-box:before, section .padding-medium:before{
     border: 20px solid transparent;
     border-left: 20px solid lightskyblue;
     border-top: 20px solid lightskyblue;
+}
 }
 @media print {
 body{
