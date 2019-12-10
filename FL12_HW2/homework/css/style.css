@@ -190,6 +190,7 @@ body{
 }
  .blocks p + p{
      font-style: italic;
-     letter-spacing: 7px;
+     letter-spacing: 5px;
+     word-spacing: 10px;
  }
 }
