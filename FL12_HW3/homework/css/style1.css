@@ -1,0 +1,95 @@
+.header_button {
+  background: #699900;
+  border: none;
+  position: absolute;
+  border-radius: 2px;
+  height: 35px;
+  width: 100px;
+  font-family: "Hind", sans-serif;
+  font-weight: bold;
+  color: #fff; }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+.header {
+  width: 100%;
+  height: 505px;
+  background-image: url("../img/m-h-day.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: 0px -195px;
+  border-bottom-right-radius: 530px 200px; }
+
+.header-wrap {
+  width: 420px;
+  padding-left: 3px;
+  padding-top: 12px;
+  height: inherit;
+  margin-left: 130px;
+  position: relative; }
+  .header-wrap p :before {
+    z-index: 0;
+    content: '';
+    position: absolute;
+    top: 161px;
+    left: 4px;
+    width: 213px;
+    height: 35px;
+    background-color: #14a0c7; }
+
+.landing-logo {
+  display: flex; }
+  .landing-logo img {
+    width: 32px;
+    height: 32px; }
+  .landing-logo p {
+    margin-top: -3px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Hind", sans-serif;
+    font-weight: 600;
+    margin-left: 10px; }
+  .landing-logo span {
+    font-family: "Hind", sans-serif;
+    font-size: 7px;
+    margin-top: -3px;
+    text-align: center; }
+
+.header_heading {
+  position: absolute;
+  z-index: 3;
+  line-height: 50px;
+  top: 45px;
+  font-weight: bold;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 50px;
+  letter-spacing: 0.5px; }
+
+.header_text {
+  font-family: "Hind", sans-serif;
+  font-size: 11px;
+  position: absolute;
+  top: 211px;
+  left: -30px;
+  line-height: 17px;
+  white-space: pre;
+  letter-spacing: 0.23px; }
+
+.header_button {
+  top: 348px;
+  left: 4px; }
+
+.login {
+  color: #fff;
+  font-family: "Hind", sans-serif;
+  font-size: 14px;
+  position: absolute;
+  top: 355px;
+  left: 210px; }
+
+/*.section_banner_button{
+  @extend %buttonStyle;
+  bottom: 200px;
+}*/
