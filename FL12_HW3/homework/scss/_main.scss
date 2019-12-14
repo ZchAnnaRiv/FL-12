@@ -4,7 +4,7 @@ $fontSourceSansPro: 'Source Sans Pro', sans-serif;
 $fontHind: 'Hind', sans-serif;
 $fontFresca: 'Fresca', sans-serif;
 
-%buttonStyle{
+@mixin btn {
   background: map-get($colors, buttonJoin);
   border: none;
   position: absolute;
@@ -14,6 +14,11 @@ $fontFresca: 'Fresca', sans-serif;
   font-family: $fontHind;
   font-weight: bold;
   color: #fff;
+}
+@mixin links($color, $fontFamily, $fontSize){
+  color: $color;
+  font-family: $fontFamily;
+  font-size: $fontSize;
 }
 
 body {
@@ -95,23 +100,68 @@ body {
   letter-spacing: 0.23px;
 }
 .header_button {
-  @extend %buttonStyle;
+  @include btn;
   top: 348px;
   left: 4px;
 }
 .login {
-  color: #fff;
-  font-family: $fontHind;
-  font-size: 14px;
+  @include links(#fff, $fontHind, 14px);
   position: absolute;
   top: 355px;
   left: 210px;
 }
+.section {
+  margin: -5px 21% 0 21%;
 
+  .section_text {
+    text-align: center;
+    font-size: 30px;
+    font-family: $fontSourceSansPro;
+  }
+
+  .section_card {
+    height: 200px;
+    background-color: map-get($colors, cardBackground);
+    margin-bottom: 10px;
+    border-radius: 4px;
+    padding: 15px;
+
+    .section_card_img {
+      border-radius: 4px;
+      height: 200px;
+      width: 300px;
+    }
+
+    .section_card_right_container {
+      color: white;
+      width: 50%;
+      float: right;
+      padding: 20px;
+
+      .section_card_heading {
+        text-align: center;
+        font-family: $fontSourceSansPro;
+        font-weight: 600;
+      }
+
+      .section_card_text {
+        width: 350px;
+        font-family: $fontHind;
+        font-size: 12px;
+        word-break: keep-all;
+      }
+
+      .section_link {
+        @include links(#fff, $fontHind, 12px);
+        margin-left: 40%;
+      }
+    }
+  }
+}
 
 
 
 /*.section_banner_button{
-  @extend %buttonStyle;
+ @include btn;
   bottom: 200px;
 }*/

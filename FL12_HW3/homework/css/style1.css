@@ -1,14 +1,3 @@
-.header_button {
-  background: #699900;
-  border: none;
-  position: absolute;
-  border-radius: 2px;
-  height: 35px;
-  width: 100px;
-  font-family: "Hind", sans-serif;
-  font-weight: bold;
-  color: #fff; }
-
 body {
   margin: 0;
   padding: 0; }
@@ -78,6 +67,15 @@ body {
   letter-spacing: 0.23px; }
 
 .header_button {
+  background: #699900;
+  border: none;
+  position: absolute;
+  border-radius: 2px;
+  height: 35px;
+  width: 100px;
+  font-family: "Hind", sans-serif;
+  font-weight: bold;
+  color: #fff;
   top: 348px;
   left: 4px; }
 
@@ -89,7 +87,43 @@ body {
   top: 355px;
   left: 210px; }
 
+.section {
+  margin: -5px 21% 0 21%; }
+  .section .section_text {
+    text-align: center;
+    font-size: 30px;
+    font-family: "Source Sans Pro", sans-serif; }
+  .section .section_card {
+    height: 200px;
+    background-color: #21232e;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    padding: 15px; }
+    .section .section_card .section_card_img {
+      border-radius: 4px;
+      height: 200px;
+      width: 300px; }
+    .section .section_card .section_card_right_container {
+      color: white;
+      width: 50%;
+      float: right;
+      padding: 20px; }
+      .section .section_card .section_card_right_container .section_card_heading {
+        text-align: center;
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 600; }
+      .section .section_card .section_card_right_container .section_card_text {
+        width: 350px;
+        font-family: "Hind", sans-serif;
+        font-size: 12px;
+        word-break: keep-all; }
+      .section .section_card .section_card_right_container .section_link {
+        color: #fff;
+        font-family: "Hind", sans-serif;
+        font-size: 12px;
+        margin-left: 40%; }
+
 /*.section_banner_button{
-  @extend %buttonStyle;
+ @include btn;
   bottom: 200px;
 }*/
