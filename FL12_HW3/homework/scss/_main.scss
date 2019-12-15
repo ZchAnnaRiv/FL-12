@@ -53,6 +53,39 @@ body {
         background-color: map-get($colors, words);
       }
     }
+    .header_heading {
+      position: absolute;
+      z-index: 3;
+      line-height: 50px;
+      top: 45px;
+      font-weight: bold;
+      font-family: map-get($fonts, generalText);
+      font-size: 50px;
+      letter-spacing: 0.5px;
+    }
+    .header_text {
+      font-size: 11px;
+      position: absolute;
+      top: 211px;
+      left: -30px;
+      line-height: 17px;
+      white-space: pre;
+      letter-spacing: 0.23px;
+    }
+    .header_button {
+      @include btn;
+      position: absolute;
+      top: 348px;
+      left: 4px;
+    }
+    .login {
+      @include links(#fff, map-get($fonts, generalText), 14px);
+      position: absolute;
+      top: 355px;
+      left: 210px;
+    }
+
+
   }
 
 }
@@ -78,41 +111,6 @@ body {
     margin-top: -3px;
     text-align: center;
   }
-}
-
-.header_heading {
-  position: absolute;
-  z-index: 3;
-  line-height: 50px;
-  top: 45px;
-  font-weight: bold;
-  font-family: map-get($fonts, generalText);
-  font-size: 50px;
-  letter-spacing: 0.5px;
-}
-
-.header_text {
-  font-size: 11px;
-  position: absolute;
-  top: 211px;
-  left: -30px;
-  line-height: 17px;
-  white-space: pre;
-  letter-spacing: 0.23px;
-}
-
-.header_button {
-  @include btn;
-  position: absolute;
-  top: 348px;
-  left: 4px;
-}
-
-.login {
-  @include links(#fff, map-get($fonts, generalText), 14px);
-  position: absolute;
-  top: 355px;
-  left: 210px;
 }
 
 .section {
@@ -167,11 +165,10 @@ body {
     color: white;
     width: 50%;
     float: right;
-    padding: 20px;
+    padding: 0 20px;
 
     .section_card_heading {
-      line-height: 50px;
-
+      line-height: 30px;
       text-align: center;
       font-family: map-get($fonts, generalText);
       font-weight: 600;
