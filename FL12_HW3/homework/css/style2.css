@@ -29,6 +29,42 @@ body {
       width: 213px;
       height: 35px;
       background-color: #ff4e33; }
+    .header .header-wrap .header_heading {
+      position: absolute;
+      z-index: 3;
+      line-height: 50px;
+      top: 45px;
+      font-weight: bold;
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 50px;
+      letter-spacing: 0.5px; }
+    .header .header-wrap .header_text {
+      font-size: 11px;
+      position: absolute;
+      top: 211px;
+      left: -30px;
+      line-height: 17px;
+      white-space: pre;
+      letter-spacing: 0.23px; }
+    .header .header-wrap .header_button {
+      background: #e3ac00;
+      border: none;
+      border-radius: 2px;
+      height: 35px;
+      width: 100px;
+      font-family: "Source Sans Pro", sans-serif;
+      font-weight: bold;
+      color: #fff;
+      position: absolute;
+      top: 348px;
+      left: 4px; }
+    .header .header-wrap .login {
+      color: #fff;
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 14px;
+      position: absolute;
+      top: 355px;
+      left: 210px; }
 
 .landing-logo, .footer .footer-wrap .footer_logo {
   display: flex; }
@@ -45,46 +81,6 @@ body {
     font-size: 7px;
     margin-top: -3px;
     text-align: center; }
-
-.header_heading {
-  position: absolute;
-  z-index: 3;
-  line-height: 50px;
-  top: 45px;
-  font-weight: bold;
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 50px;
-  letter-spacing: 0.5px; }
-
-.header_text {
-  font-size: 11px;
-  position: absolute;
-  top: 211px;
-  left: -30px;
-  line-height: 17px;
-  white-space: pre;
-  letter-spacing: 0.23px; }
-
-.header_button {
-  background: #e3ac00;
-  border: none;
-  border-radius: 2px;
-  height: 35px;
-  width: 100px;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: bold;
-  color: #fff;
-  position: absolute;
-  top: 348px;
-  left: 4px; }
-
-.login {
-  color: #fff;
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 14px;
-  position: absolute;
-  top: 355px;
-  left: 210px; }
 
 .section {
   position: relative;
@@ -129,9 +125,9 @@ body {
     color: white;
     width: 50%;
     float: right;
-    padding: 20px; }
+    padding: 0 20px; }
     .section_card .section_card_right_container .section_card_heading {
-      line-height: 50px;
+      line-height: 30px;
       text-align: center;
       font-family: "Source Sans Pro", sans-serif;
       font-weight: 600; }
