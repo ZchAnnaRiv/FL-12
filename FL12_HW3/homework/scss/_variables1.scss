@@ -1,10 +1,15 @@
 $mainImg: url('../img/m-h-day.jpg');
-$styledWords: (
-        awesome: #14a0c7,
-        adventure: #000,
-        start: #000
+
+$colors: (
+        bodyBackground: #fff,
+        buttonJoin: #699900,
+        cardBackground: #21232e,
+        gradientStart: #66960a,
+        gradientEnd: #2f5dd1,
+        footerBackground: #21232e,
+        words: #14a0c7,
 );
-$colors:(
-    buttonJoin: #699900,
-    cardBackground: #21232e,
-);
+$fonts: (
+        generalText: ('Source Sans Pro', sans-serif),
+        secondText: ('Hind', sans-serif),
+)

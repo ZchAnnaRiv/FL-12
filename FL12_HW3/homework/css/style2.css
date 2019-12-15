@@ -1,47 +1,47 @@
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  background-color: #21232e;
+  color: #fff;
+  font-family: "Fresca", sans-serif; }
 
 .header {
   width: 100%;
   height: 505px;
-  background-image: url("../img/m-h-day.jpg");
+  background-image: url("../img/m-h-night.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: 0px -195px;
   border-bottom-right-radius: 530px 200px; }
+  .header .header-wrap {
+    width: 420px;
+    padding-left: 3px;
+    padding-top: 12px;
+    height: inherit;
+    margin-left: 130px;
+    position: relative; }
+    .header .header-wrap p :before {
+      z-index: 0;
+      content: '';
+      position: absolute;
+      top: 161px;
+      left: 4px;
+      width: 213px;
+      height: 35px;
+      background-color: #ff4e33; }
 
-.header-wrap {
-  width: 420px;
-  padding-left: 3px;
-  padding-top: 12px;
-  height: inherit;
-  margin-left: 130px;
-  position: relative; }
-  .header-wrap p :before {
-    z-index: 0;
-    content: '';
-    position: absolute;
-    top: 161px;
-    left: 4px;
-    width: 213px;
-    height: 35px;
-    background-color: #14a0c7; }
-
-.landing-logo {
+.landing-logo, .footer .footer-wrap .footer_logo {
   display: flex; }
-  .landing-logo img {
+  .landing-logo img, .footer .footer-wrap .footer_logo img {
     width: 32px;
     height: 32px; }
-  .landing-logo p {
+  .landing-logo p, .footer .footer-wrap .footer_logo p {
     margin-top: -3px;
     display: flex;
     flex-direction: column;
-    font-family: "Hind", sans-serif;
     font-weight: 600;
     margin-left: 10px; }
-  .landing-logo span {
-    font-family: "Hind", sans-serif;
+  .landing-logo span, .footer .footer-wrap .footer_logo span {
     font-size: 7px;
     margin-top: -3px;
     text-align: center; }
@@ -57,7 +57,6 @@ body {
   letter-spacing: 0.5px; }
 
 .header_text {
-  font-family: "Hind", sans-serif;
   font-size: 11px;
   position: absolute;
   top: 211px;
@@ -67,63 +66,135 @@ body {
   letter-spacing: 0.23px; }
 
 .header_button {
-  background: #699900;
+  background: #e3ac00;
   border: none;
-  position: absolute;
   border-radius: 2px;
   height: 35px;
   width: 100px;
-  font-family: "Hind", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: bold;
   color: #fff;
+  position: absolute;
   top: 348px;
   left: 4px; }
 
 .login {
   color: #fff;
-  font-family: "Hind", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 14px;
   position: absolute;
   top: 355px;
   left: 210px; }
 
 .section {
+  position: relative;
   margin: -5px 21% 0 21%; }
-  .section .section_text {
-    text-align: center;
-    font-size: 30px;
-    font-family: "Source Sans Pro", sans-serif; }
-  .section .section_card {
-    height: 200px;
-    background-color: #21232e;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    padding: 15px; }
-    .section .section_card .section_card_img {
-      border-radius: 4px;
-      height: 200px;
-      width: 300px; }
-    .section .section_card .section_card_right_container {
-      color: white;
-      width: 50%;
-      float: right;
-      padding: 20px; }
-      .section .section_card .section_card_right_container .section_card_heading {
-        text-align: center;
-        font-family: "Source Sans Pro", sans-serif;
-        font-weight: 600; }
-      .section .section_card .section_card_right_container .section_card_text {
-        width: 350px;
-        font-family: "Hind", sans-serif;
-        font-size: 12px;
-        word-break: keep-all; }
-      .section .section_card .section_card_right_container .section_link {
-        color: #fff;
-        font-family: "Hind", sans-serif;
-        font-size: 12px;
-        margin-left: 40%; }
+  .section > p:before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 398px;
+    width: 130px;
+    height: 35px;
+    background-color: #ff4e33; }
+  .section :last-child p:last-child:before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 205px;
+    width: 50px;
+    height: 30px;
+    background-color: #ff4e33; }
 
-/*.section_banner_button{
- @include btn;
-  bottom: 200px;
-}*/
+.section_text {
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  font-family: "Source Sans Pro", sans-serif;
+  z-index: 1; }
+
+.section_card {
+  height: 200px;
+  background-color: #3b3f50;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  padding: 15px; }
+  .section_card .section_card_img {
+    border-radius: 4px;
+    height: 200px;
+    width: 300px; }
+  .section_card .section_card_right_container {
+    color: white;
+    width: 50%;
+    float: right;
+    padding: 20px; }
+    .section_card .section_card_right_container .section_card_heading {
+      line-height: 50px;
+      text-align: center;
+      font-family: "Source Sans Pro", sans-serif;
+      font-weight: 600; }
+    .section_card .section_card_right_container .section_card_text {
+      width: 350px;
+      font-size: 12px; }
+    .section_card .section_card_right_container .section_link {
+      color: #fff;
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 12px;
+      margin-left: 40%; }
+
+.section_banner {
+  z-index: 2;
+  position: absolute;
+  bottom: -205px;
+  right: 0;
+  left: 0;
+  height: 100px;
+  display: flex;
+  border-radius: 5px;
+  margin: auto -30px;
+  padding: 10px 15% 0 15%;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Source Sans Pro", sans-serif;
+  background: linear-gradient(to right, #dfa504, #8d334f); }
+  .section_banner .section_banner_text_wrap {
+    vertical-align: middle; }
+    .section_banner .section_banner_text_wrap p {
+      line-height: 10px; }
+    .section_banner .section_banner_text_wrap .section_banner_heading {
+      font-size: 22px;
+      font-weight: bold; }
+    .section_banner .section_banner_text_wrap .section_banner_text {
+      font-size: 11px;
+      color: white;
+      margin-bottom: 40px; }
+  .section_banner .section_banner_button {
+    background: #e3ac00;
+    border: none;
+    border-radius: 2px;
+    height: 35px;
+    width: 100px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: bold;
+    color: #fff; }
+
+.footer {
+  height: 160px;
+  color: white;
+  margin-top: 150px;
+  background-color: #3b3f50; }
+  .footer .footer-wrap {
+    padding: 85px 10% 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .footer .footer-wrap .footer_logo {
+      height: 32px; }
+    .footer .footer-wrap .footer_text {
+      width: 220px;
+      font-size: 10px; }
+    .footer .footer-wrap .footer-cr {
+      height: 32px;
+      font-size: 11px; }
