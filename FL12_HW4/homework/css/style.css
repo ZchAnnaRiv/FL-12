@@ -107,6 +107,9 @@ a {
     width: inherit;
     margin-top: 50px;
     height: 870px;
+}
+
+.post:not(:last-child) {
     border-bottom: 1px solid #777777;
 }
 
