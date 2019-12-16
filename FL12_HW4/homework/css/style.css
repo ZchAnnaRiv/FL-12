@@ -166,28 +166,32 @@ body {
     margin-top: 20px;
 }
 
-.footer{
+.footer {
     margin-top: 70px;
     bottom: 0;
     background: black;
     height: 300px;
     width: 100%;
 }
-.footer-wrap{
+
+.footer-wrap {
     display: flex;
     justify-content: center;
 }
-.footer-wrap div{
+
+.footer-wrap div {
     padding-left: 100px;
     margin: 50px 0;
     padding-top: 15px;
     width: 400px;
 }
-.footer-wrap div>p:not(:first-child){
+
+.footer-wrap div > p:not(:first-child) {
     font-size: 15px;
     line-height: 20px;
 }
-.footer-wrap div>p:first-child{
+
+.footer-wrap div > p:first-child {
     font-weight: bold;
     font-size: 23px;
     color: #ffffff;
