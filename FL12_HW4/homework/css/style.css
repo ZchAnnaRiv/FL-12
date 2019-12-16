@@ -32,8 +32,13 @@ body {
     margin-left: 40px;
 }
 
-.nav-menu li:hover {
+.nav-menu li a:hover {
     color: #bfba55;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 .main-page {
@@ -126,6 +131,7 @@ body {
     margin-top: 25px;
     color: #000000;
 }
+
 
 .article-beginning {
     line-height: 25px;
