@@ -48,7 +48,7 @@ a {
     margin-top: 70px;
     width: 100%;
     overflow: hidden;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
 }
 
 .main-page img {
@@ -107,6 +107,7 @@ a {
     width: inherit;
     margin-top: 50px;
     height: 870px;
+    position: relative;
 }
 
 .post:not(:last-child) {
@@ -133,12 +134,7 @@ a {
     font-size: 25px;
     margin-top: 25px;
     color: #000000;
-}
-
-
-.article-beginning {
-    line-height: 25px;
-    font-size: 15px;
+    letter-spacing: 0.5px;
 }
 
 .post-info {
@@ -161,17 +157,22 @@ a {
     border-radius: 40px;
 }
 
+.article-beginning {
+    line-height: 22px;
+    font-size: 15px;
+}
+
 .second-btn {
     color: #777777;
-    text-transform: uppercase;
     background: transparent;
     border: 1px solid #777;
     border-radius: 40px;
-    width: 170px;
+    width: 160px;
     height: 45px;
-    font-size: 10px;
+    font-size: 12px;
     letter-spacing: 1px;
-    margin-top: 20px;
+    position: absolute;
+    bottom: 63px;
 }
 
 .footer {
