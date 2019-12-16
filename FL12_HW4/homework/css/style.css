@@ -7,7 +7,7 @@ body {
 .header {
     background: #ffffff;
     z-index: 2;
-    height: 75px;
+    height: 10vh;
     position: fixed;
     left: 0;
     top: 0;
@@ -44,7 +44,7 @@ a {
 .main-page {
     background: #000000;
     position: relative;
-    height: 100vh;
+    height: 90vh;
     margin-top: 70px;
     width: 100%;
     overflow: hidden;
