@@ -1,0 +1,355 @@
+@media (max-width: 1400px) {
+
+    body {
+        background: #0b192f;
+        font-family: roboto;
+        overflow-x: hidden;
+    }
+
+    .post-1 {
+        background: #9d27b0;
+    }
+
+    .post-2 {
+        background: #9bb800;
+    }
+
+    .post-3 {
+        background: #ed5120;
+    }
+
+    .post-4 {
+        background: #9d27b0;
+    }
+
+    .post-5 {
+        background: #2d95bb;
+    }
+
+    * {
+        color: #ffffff;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        height: 17vh;
+        background: #024161;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    header h1 {
+        color: #ffffff;
+        font-weight: 300;
+        font-size: 40px;
+        margin: -10px 5px 0 5px;
+    }
+
+    header span {
+        color: #9d27b0;
+        font-weight: 100;
+    }
+
+    .nav-menu {
+        height: inherit;
+    }
+
+    .nav-menu ul {
+        margin-right: 50px;
+        height: inherit;
+        display: flex;
+        list-style: none;
+    }
+
+    .nav-menu ul li {
+        line-height: 17vh;
+        text-align: center;
+        width: 110px;
+    }
+
+    .nav-menu ul li a {
+        display: block;
+        height: inherit;
+        font-weight: 500;
+        font-size: 22px;
+        text-decoration: none;
+    }
+
+    .nav-menu ul li a:hover {
+        background: #1f52a4;
+    }
+
+    .hero-section {
+        padding-top: 20vh;
+        margin-top: 3vh;
+        min-height: 300px;
+        background: url("../img/post0.jpg") no-repeat 0 -5vw;
+        background-size: 100%;
+    }
+
+    .hero-section h2 {
+        margin-top: 7%;
+        margin-left: 3%;
+        letter-spacing: 1px;
+        font-size: 4vw;
+        font-weight: 100;
+    }
+
+    .hero-section p {
+        width: 65vw;
+        margin-left: 3%;
+        line-height: 1.6em;
+        font-size: 1.5vw;
+    }
+
+    .main-section {
+        margin-top: 2vh;
+        width: 100%;
+        display: flex;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .post a {
+        position: relative;
+        width: 72vw;
+        display: flex;
+        flex-direction: row;
+        height: 350px;
+        text-decoration: none;
+    }
+
+    .post:hover .post-image, .post:hover .post-text {
+        opacity: 70%;
+    }
+
+    .post-image {
+        overflow: hidden;
+        min-width: 49%;
+    }
+
+    .post-text {
+        padding-top: 45px;
+        min-width: 51%;
+        text-align: left;
+    }
+
+    .post a div img {
+        max-height: 100%;
+        min-width: 100%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .post-text h2 {
+        line-height: 1em;
+        padding: 0 4vw;
+        font-weight: 300;
+        font-size: 4vw;
+    }
+
+    .post-text p {
+        padding: 2vw 3vw 0 4vw;
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 1.6em;
+        opacity: 70%;
+    }
+
+    .post-date {
+        width: 4vw;
+        font-size: 4vw;
+        line-height: 0.85em;
+        opacity: 20%;
+        position: absolute;
+        top: 27px;
+        right: 20px;
+        font-weight: 300;
+    }
+
+    .post-date span {
+        font-size: 2.2vw;
+    }
+
+    .post:nth-child(2n) a {
+        flex-direction: row-reverse;
+    }
+
+    .post:nth-child(2n) a .post-text {
+        text-align: right;
+    }
+
+    .post:nth-child(2n) a .post-date {
+        left: 20px;
+    }
+
+    .no-image {
+        text-align: left;
+        max-height: 35vh;
+        min-height: 250px;
+    }
+
+    .no-image .post-text .post-date {
+        left: 100%;
+        transform: translateX(-150%);
+    }
+
+    .no-image .post-text h2, .no-image .post-text p {
+        text-align: left;
+    }
+
+    aside {
+        margin-left: 1.5vw;
+    }
+
+    .post-aside {
+        margin-bottom: 3vh;
+        width: 24vw;
+        background: #ffffff;
+    }
+
+    .post-aside-text {
+        min-height: 250px;
+        height: 20vw;
+        width: 20vw;
+        padding: 0 0 2.5vw 3vw;
+    }
+
+    .post-aside-text h2 {
+        width: 100%;
+        margin-top: 30px;
+        padding-bottom: 5px;
+        font-size: 25px;
+        font-weight: 300;
+    }
+
+    .post-aside-text p {
+        font-size: 1.4vw;
+        font-weight: 300;
+        line-height: 1.5em;
+        opacity: 70%;
+    }
+
+    .post-aside-text h2, .post-aside-text p {
+        color: #000;
+    }
+
+    .post-aside-img {
+        width: inherit;
+        max-height: 20vw;
+    }
+
+    .post-aside-img img {
+        width: inherit;
+    }
+
+    footer {
+        margin-top: 20px;
+        padding: 35px 35px 0 30px;
+        background: #024161;
+        height: 20vh;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer div {
+        opacity: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        padding: 2px 4px;
+        max-width: 768px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    header {
+        position: relative;
+        height: 25vw;
+    }
+
+    header h1 {
+        position: absolute;
+        top: 60%;
+        width: 100%;
+        text-align: center;
+    }
+
+    header:before {
+        font-size: 25px;
+        position: absolute;
+        left: 50%;
+        top: 10%;
+        content: '\2630';
+    }
+
+    .hero-section {
+        min-height: 150px;
+        width: 100%;
+        background-size: 120%;
+    }
+
+    .hero-section p {
+        width: 90%;
+    }
+
+    .post:nth-child(n) a {
+        flex-direction: column;
+    }
+
+    .post a {
+        width: 65vw;
+        height: auto;
+    }
+
+    .post a div {
+        min-height: 200px;
+        max-height: 250px;
+    }
+
+    .post a div img {
+        width: 100%;
+        max-height: none;
+        margin-top: -5%;
+    }
+
+    .post a .post-date {
+        position: absolute;
+        top: 55%;
+    }
+
+    .no-image a .post-date {
+        position: absolute;
+        top: 20px;
+    }
+
+    .post:nth-child(2n) a .post-date {
+        position: absolute;
+        margin-left: 85%;
+    }
+
+    .post:nth-child(2n) a .post-text {
+        text-align: left;
+    }
+
+    .post-aside {
+        width: 32vw;
+    }
+
+    .post-aside-text p {
+        width: 200px;
+        font-size: 13px;
+
+    }
+}
