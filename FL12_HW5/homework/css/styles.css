@@ -37,6 +37,7 @@
         background: #024161;
         display: flex;
         align-items: center;
+        width: 100%;
         justify-content: space-between;
         padding: 0 20px;
     }
@@ -55,6 +56,7 @@
 
     .nav-menu {
         height: inherit;
+        margin-right: 40px;
     }
 
     .nav-menu ul {
@@ -83,16 +85,35 @@
     }
 
     .hero-section {
-        padding-top: 20vh;
+        position: relative;
         margin-top: 3vh;
+        width: 100%;
         min-height: 300px;
-        background: url("../img/post0.jpg") no-repeat 0 -5vw;
-        background-size: 100%;
+    }
+
+    .hero-text {
+        bottom: 50px;
+        position: absolute;
+        margin-left: 3%;
+    }
+
+    .hero-img {
+        position: relative;
+        width: 100%;
+        height: 32vw;
+        overflow: hidden;
+    }
+
+    .hero-img img {
+        position: absolute;
+        top: -70px;
+        width: 100%;
+        right: 0;
+        left: 0;
     }
 
     .hero-section h2 {
-        margin-top: 7%;
-        margin-left: 3%;
+        margin-bottom: 20px;
         letter-spacing: 1px;
         font-size: 4vw;
         font-weight: 100;
@@ -100,7 +121,6 @@
 
     .hero-section p {
         width: 65vw;
-        margin-left: 3%;
         line-height: 1.6em;
         font-size: 1.5vw;
     }
@@ -118,10 +138,10 @@
 
     .post a {
         position: relative;
-        width: 72vw;
+        width: 73vw;
         display: flex;
         flex-direction: row;
-        height: 350px;
+        height: 340px;
         text-decoration: none;
     }
 
@@ -192,7 +212,7 @@
     .no-image {
         text-align: left;
         max-height: 35vh;
-        min-height: 250px;
+        min-height: 200px;
     }
 
     .no-image .post-text .post-date {
@@ -277,6 +297,7 @@
     header {
         position: relative;
         height: 25vw;
+        padding: 0;
     }
 
     header h1 {
@@ -295,13 +316,24 @@
     }
 
     .hero-section {
-        min-height: 150px;
+        min-height: 200px;
         width: 100%;
-        background-size: 120%;
     }
 
-    .hero-section p {
+    .hero-img {
+        min-height: 250px;
+    }
+
+    .hero-img img {
+        width: 150%;
+        top: 0px;
+        left: -200px;
+        bottom: 0;
+    }
+
+    .hero-text p {
         width: 90%;
+        font-size: 2.5vw;
     }
 
     .post:nth-child(n) a {
@@ -347,8 +379,17 @@
         width: 32vw;
     }
 
+    .post-aside-text {
+        width: 100%;
+        padding: 2px;
+    }
+
+    .post-aside-text h2 {
+        font-size: 4vw;
+    }
+
     .post-aside-text p {
-        width: 200px;
+        max-width: 200px;
         font-size: 13px;
 
     }
