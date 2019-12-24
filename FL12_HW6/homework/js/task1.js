@@ -1,6 +1,5 @@
 let a, b, c, x1, x2;
 
-
 do {
     a = Number(prompt('Enter "a" number for ax²+bx+c=0'));
     if (isNaN(a) || a === 0) {
@@ -19,7 +18,6 @@ do {
         console.log('Invalid input data');
     }
 } while (isNaN(c));
-
 
 const discriminant = b * b - 4 * a * c;
 
