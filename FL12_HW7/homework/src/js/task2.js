@@ -20,6 +20,8 @@ if (confirm('Do you want to play a game?')) {
 
             if (isNaN(userNumber)) {
                 break;
+            }else {
+                parseInt(userNumber);
             }
             if (userNumber === randomNumber) {
                 break;
