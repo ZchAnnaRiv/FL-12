@@ -69,7 +69,12 @@ function getPastDay(date, daysAgo) {
 }
 
 function formatDate(date) {
-    return `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()} ${date.getHours()}:${date.getMinutes()}`;
+    function format_HH_MM(dateNumber) {
+        return dateNumber < 10 ? '0' + dateNumber : dateNumber;
+    }
+
+    return `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}` +
+        ` ${format_HH_MM(date.getHours())}:${format_HH_MM(date.getMinutes())}`;
 }
 
 
