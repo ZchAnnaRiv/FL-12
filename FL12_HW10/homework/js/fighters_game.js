@@ -17,7 +17,6 @@ function Fighter(obj) {
             if (100 - enemy.getAgility() - enemy.getStrength() > successOfAttack) {
                 console.log(`${fighter.name} makes ${fighter.damage} damage to ${enemy.getName()}`);
                 enemy.dealDamage(fighter.damage);
-                console.log(enemy.getDamage());
             } else {
                 console.log(`${enemy.getName()} attack missed`);
             }
