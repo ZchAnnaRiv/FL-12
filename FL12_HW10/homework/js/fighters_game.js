@@ -47,10 +47,6 @@ function Fighter(obj) {
     }
 }
 
-let user = new Fighter({name: 'Cat', damage: 30, hp: 100, strength: 18, agility: 56});
-let user2 = new Fighter({name: 'Dog', damage: 10, hp: 100, strength: 20, agility: 24});
-
-
 function battle(fighter1, fighter2) {
     if (fighter1.getHealth() > 0 && fighter2.getHealth() > 0) {
         while (fighter1.getHealth() > 0 && fighter2.getHealth() > 0) {
@@ -69,4 +65,3 @@ function battle(fighter1, fighter2) {
     console.log(`${wimp.getName()} is dead and can't fight`);
 }
 
-battle(user, user2);
