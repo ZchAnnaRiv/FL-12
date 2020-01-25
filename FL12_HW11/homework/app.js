@@ -45,10 +45,10 @@ function recurse(data, idRoot) {
         let NewDiv = document.createElement('div');
         if (data[i].folder) {
             NewLI.setAttribute('class', 'folder');
-            NewDiv.innerHTML += `<i class="material-icons">folder</i>`;
+            NewDiv.innerHTML += `<i class="material-icons folder-icon">folder</i>`;
         } else {
             NewLI.setAttribute('class', 'just-file');
-            console.log('file');
+            NewDiv.innerHTML += `<i class="material-icons file-icon">insert_drive_file</i>`;
         }
         NewDiv.innerHTML += `${data[i].title}`;
         NewLI.appendChild(NewDiv);
@@ -77,18 +77,18 @@ let folders = document.getElementsByClassName('div-folder');
 
 for (let el of folders) {
     el.addEventListener('click', function () {
-        if (el.getElementsByTagName('i')[0].innerText === 'folder') {
-            el.getElementsByTagName('i')[0].innerText = 'folder_open';
+        if (el.getElementsByClassName('folder-icon')[0].innerText === 'folder') {
+            el.getElementsByClassName('folder-icon')[0].innerText = 'folder_open';
             el.nextSibling.setAttribute('class', 'display-block');
 
         } else {
-            el.getElementsByTagName('i')[0].innerText = 'folder';
+            el.getElementsByClassName('folder-icon')[0].innerText = 'folder';
             el.nextSibling.setAttribute('class', 'display-none');
         }
     })
 }
 for (let el of folders) {
     for (let i = 0; i < 2; i++) {
-        el.click();
+       el.click();
     }
 }
