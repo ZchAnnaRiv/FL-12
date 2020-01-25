@@ -1,0 +1,16 @@
+.folder{
+    background: red;
+}
+.folder:before{
+    content: '';
+}
+.just-file, p{
+    background: white;
+}
+
+ul li:not(p):hover{
+    background: grey;
+}
+ul{
+    max-width: 700px;
+}
