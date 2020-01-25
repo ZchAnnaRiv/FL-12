@@ -54,6 +54,7 @@ function addNewListElement(data) {
     newDiv.setAttribute('class', `div-folder`);
     newLI.setAttribute('class', `${styleElement.classNameLI}`);
     newLI.setAttribute('id', `ul${data.title}`);
+
     newLI.appendChild(newDiv);
     if (data.folder && !data.children) {
         let p = document.createElement('p');
@@ -63,39 +64,49 @@ function addNewListElement(data) {
     return newLI;
 }
 
-function buildFolderStructure(data, idRoot) {
+function buildFolderStructure(data, id) {
+    let currentRoot = document.getElementById(id);
     let newUL = document.createElement('ul');
+
     for (let i = 0; i < data.length; i++) {
-        let currentRoot = document.getElementById(idRoot);
         let childLI = addNewListElement(data[i]);
         newUL.appendChild(childLI);
-        currentRoot.appendChild(newUL);
     }
+    currentRoot.appendChild(newUL);
+
     for (let i = 0; i < data.length; i++) {
         if (data[i].children) {
             buildFolderStructure(data[i].children, `ul${data[i].title}`);
         }
     }
+
+
 }
 
 buildFolderStructure(structure, 'root');
 
 let folders = document.getElementsByClassName('div-folder');
 
-for (let el of folders) {
-    el.addEventListener('click', function () {
-        if (el.getElementsByClassName('folder-icon')[0].innerText === 'folder') {
-            el.getElementsByClassName('folder-icon')[0].innerText = 'folder_open';
-            el.nextSibling.setAttribute('class', 'display-block');
-        } else {
-            el.getElementsByClassName('folder-icon')[0].innerText = 'folder';
-            el.nextSibling.setAttribute('class', 'display-none');
-        }
-    })
+function changeFolderStatusOnClick(folders) {
+    for (let el of folders) {
+        el.addEventListener('click', function () {
+            if (el.getElementsByClassName('folder-icon')[0].innerText === 'folder') {
+                el.getElementsByClassName('folder-icon')[0].innerText = 'folder_open';
+                el.nextSibling.setAttribute('class', 'display-block');
+            } else {
+                el.getElementsByClassName('folder-icon')[0].innerText = 'folder';
+                el.nextSibling.setAttribute('class', 'display-none');
+            }
+        })
+    }
 }
+
+changeFolderStatusOnClick(folders);
 
 for (let el of folders) {
     for (let i = 0; i < 2; i++) {
         el.click();
     }
 }
+
+
