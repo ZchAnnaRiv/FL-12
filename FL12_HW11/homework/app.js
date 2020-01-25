@@ -37,58 +37,66 @@ const structure = [
 
 const rootNode = document.getElementById('root');
 
-function recurse(data, idRoot) {
-    let NewUL = document.createElement('ul');
+
+function setElementStyle(folder) {
+    let styleElement = {};
+    styleElement.classNameLI = folder ? 'folder' : 'just-file';
+    styleElement.classNameI = folder ? 'folder-icon' : 'file-icon';
+    styleElement.nameI = folder ? 'folder' : 'insert_drive_file';
+    return styleElement;
+}
+
+function addNewListElement(data) {
+    let newLI = document.createElement('li');
+    let newDiv = document.createElement('div');
+    let styleElement = setElementStyle(data.folder);
+    newLI.setAttribute('class', `${styleElement.classNameLI}`);
+    newDiv.innerHTML += '<i class= "material-icons ' + styleElement.classNameI + '">' + styleElement.nameI + '</i>';
+    newDiv.innerHTML += `${data.title}`;
+    newLI.appendChild(newDiv);
+    if (data.folder && !data.children) {
+        let p = document.createElement('p');
+        p.innerHTML = 'Folder is empty';
+        newLI.append(p);
+    }
+    newDiv.setAttribute('class', `div-folder`);
+    return newLI;
+}
+
+function buildFolderStructure(data, idRoot) {
+    let newUL = document.createElement('ul');
     for (let i = 0; i < data.length; i++) {
-        let MainRoot = document.getElementById(idRoot);
-        let NewLI = document.createElement('li');
-        let NewDiv = document.createElement('div');
-        if (data[i].folder) {
-            NewLI.setAttribute('class', 'folder');
-            NewDiv.innerHTML += `<i class="material-icons folder-icon">folder</i>`;
-        } else {
-            NewLI.setAttribute('class', 'just-file');
-            NewDiv.innerHTML += `<i class="material-icons file-icon">insert_drive_file</i>`;
-        }
-        NewDiv.innerHTML += `${data[i].title}`;
-        NewLI.appendChild(NewDiv);
-        if (!data[i].children && data[i].folder) {
-            let p = document.createElement('p');
-            p.innerHTML = 'Folder is empty';
-            NewLI.append(p);
-        }
-        NewUL.appendChild(NewLI);
-        NewLI.setAttribute('id', `ul${data[i].title}`);
-        NewDiv.setAttribute('class', `div-folder`);
-        console.log(NewLI);
-        MainRoot.appendChild(NewUL);
-        console.log(MainRoot);
+        let currentRoot = document.getElementById(idRoot);
+        let child = addNewListElement(data[i]);
+        newUL.appendChild(child);
+        child.setAttribute('id', `ul${data[i].title}`);
+        currentRoot.appendChild(newUL);
+    }
+    for (let i = 0; i < data.length; i++) {
         if (data[i].children) {
-            recurse(data[i].children, `ul${data[i].title}`);
+            buildFolderStructure(data[i].children, `ul${data[i].title}`);
         }
     }
 }
 
-recurse(structure, 'root');
-
+buildFolderStructure(structure, 'root');
 
 let folders = document.getElementsByClassName('div-folder');
-
 
 for (let el of folders) {
     el.addEventListener('click', function () {
         if (el.getElementsByClassName('folder-icon')[0].innerText === 'folder') {
             el.getElementsByClassName('folder-icon')[0].innerText = 'folder_open';
             el.nextSibling.setAttribute('class', 'display-block');
-
         } else {
             el.getElementsByClassName('folder-icon')[0].innerText = 'folder';
             el.nextSibling.setAttribute('class', 'display-none');
         }
     })
 }
+
 for (let el of folders) {
     for (let i = 0; i < 2; i++) {
-       el.click();
+        el.click();
     }
 }
