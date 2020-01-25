@@ -37,7 +37,6 @@ const structure = [
 
 const rootNode = document.getElementById('root');
 
-
 function setElementStyle(folder) {
     let styleElement = {};
     styleElement.classNameLI = folder ? 'folder' : 'just-file';
@@ -50,16 +49,17 @@ function addNewListElement(data) {
     let newLI = document.createElement('li');
     let newDiv = document.createElement('div');
     let styleElement = setElementStyle(data.folder);
-    newLI.setAttribute('class', `${styleElement.classNameLI}`);
     newDiv.innerHTML += '<i class= "material-icons ' + styleElement.classNameI + '">' + styleElement.nameI + '</i>';
     newDiv.innerHTML += `${data.title}`;
+    newDiv.setAttribute('class', `div-folder`);
+    newLI.setAttribute('class', `${styleElement.classNameLI}`);
+    newLI.setAttribute('id', `ul${data.title}`);
     newLI.appendChild(newDiv);
     if (data.folder && !data.children) {
         let p = document.createElement('p');
         p.innerHTML = 'Folder is empty';
         newLI.append(p);
     }
-    newDiv.setAttribute('class', `div-folder`);
     return newLI;
 }
 
@@ -67,9 +67,8 @@ function buildFolderStructure(data, idRoot) {
     let newUL = document.createElement('ul');
     for (let i = 0; i < data.length; i++) {
         let currentRoot = document.getElementById(idRoot);
-        let child = addNewListElement(data[i]);
-        newUL.appendChild(child);
-        child.setAttribute('id', `ul${data[i].title}`);
+        let childLI = addNewListElement(data[i]);
+        newUL.appendChild(childLI);
         currentRoot.appendChild(newUL);
     }
     for (let i = 0; i < data.length; i++) {
