@@ -1,16 +1,28 @@
-.folder{
-    background: red;
+.div-folder{
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    height: 1.5rem;
 }
-.folder:before{
-    content: '';
-}
-.just-file, p{
-    background: white;
+.div-folder:not(p):hover {
+    background: #e3e3e3;
 }
 
-ul li:not(p):hover{
-    background: grey;
+ul {
+    max-width: 500px;
+    list-style: none;
 }
-ul{
-    max-width: 700px;
+.display-none{
+    display: none;
+}
+.display-block{
+    display: block;
+}
+p{
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+}
+.div-folder i{
+    color: #e7d34b;
 }
