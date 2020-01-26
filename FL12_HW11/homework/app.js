@@ -51,8 +51,8 @@ function addNewListElement(data) {
     let styleElement = setElementStyle(data.folder);
     newDiv.innerHTML += '<i class= "material-icons ' + styleElement.classNameI + '">' + styleElement.nameI + '</i>';
     newDiv.innerHTML += `${data.title}`;
-    if (data.folder){
-      newDiv.setAttribute('class', `div-folder`);
+    if (data.folder) {
+        newDiv.setAttribute('class', `div-folder`);
     }
     newLI.setAttribute('class', `${styleElement.classNameLI}`);
     newLI.setAttribute('id', `ul${data.title}`);
@@ -106,7 +106,8 @@ function changeFolderStatusOnClick(folders) {
 changeFolderStatusOnClick(folders);
 
 for (let el of folders) {
-    for (let i = 0; i < 2; i++) {
+    const TWO = 2;
+    for (let i = 0; i < TWO; i++) {
         el.click();
     }
 }
