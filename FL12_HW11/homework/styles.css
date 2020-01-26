@@ -1,10 +1,10 @@
-.div-folder{
+.div-folder, .just-file div{
     display: inline-flex;
     align-items: center;
     width: 100%;
     height: 1.5rem;
 }
-.div-folder:not(p):hover {
+.div-folder:not(p):hover, .just-file:hover {
     background: #e3e3e3;
 }
 

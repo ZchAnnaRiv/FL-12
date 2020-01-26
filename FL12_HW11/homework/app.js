@@ -51,7 +51,9 @@ function addNewListElement(data) {
     let styleElement = setElementStyle(data.folder);
     newDiv.innerHTML += '<i class= "material-icons ' + styleElement.classNameI + '">' + styleElement.nameI + '</i>';
     newDiv.innerHTML += `${data.title}`;
-    newDiv.setAttribute('class', `div-folder`);
+    if (data.folder){
+      newDiv.setAttribute('class', `div-folder`);
+    }
     newLI.setAttribute('class', `${styleElement.classNameLI}`);
     newLI.setAttribute('id', `ul${data.title}`);
 
