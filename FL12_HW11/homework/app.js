@@ -37,6 +37,20 @@ const structure = [
 
 const rootNode = document.getElementById('root');
 
+buildFolderStructure(structure, rootNode.getAttribute('id'));
+
+function buildFolderStructure(treeElements, id) {
+    let currentRoot = document.getElementById(id);
+    let newUL = document.createElement('ul');
+
+    for (let i = 0; i < treeElements.length; i++) {
+        let childLI = addNewListElement(treeElements[i]);
+        newUL.appendChild(childLI);
+    }
+
+    currentRoot.appendChild(newUL);
+}
+
 function setElementStyle(folder) {
     let styleElement = {};
     styleElement.classNameLI = folder ? 'folder' : 'just-file';
@@ -72,34 +86,20 @@ function addNewListElement(treeElements) {
     return newLI;
 }
 
-function buildFolderStructure(data, id) {
-    let currentRoot = document.getElementById(id);
-    let newUL = document.createElement('ul');
+function changeFolderStatusOnClick(clickedFolder, treeElements) {
+    clickedFolder.addEventListener('click', function () {
 
-    for (let i = 0; i < data.length; i++) {
-        let childLI = addNewListElement(data[i]);
-        newUL.appendChild(childLI);
-    }
-
-    currentRoot.appendChild(newUL);
-}
-
-buildFolderStructure(structure, 'root');
-
-function changeFolderStatusOnClick(el, data) {
-    el.addEventListener('click', function () {
-
-        if (data.children) {
-            buildFolderStructure(data.children, `ul${data.title}`);
-            data = data.children;
+        if (treeElements.children) {
+            buildFolderStructure(treeElements.children, `ul${treeElements.title}`);
+            treeElements = treeElements.children;
         }
 
-        if (el.getElementsByClassName('folder-icon')[0].innerText === 'folder') {
-            el.getElementsByClassName('folder-icon')[0].innerText = 'folder_open';
-            el.nextSibling.setAttribute('class', 'display-block');
+        if (clickedFolder.getElementsByClassName('folder-icon')[0].innerText === 'folder') {
+            clickedFolder.getElementsByClassName('folder-icon')[0].innerText = 'folder_open';
+            clickedFolder.nextSibling.setAttribute('class', 'display-block');
         } else {
-            el.getElementsByClassName('folder-icon')[0].innerText = 'folder';
-            el.nextSibling.setAttribute('class', 'display-none');
+            clickedFolder.getElementsByClassName('folder-icon')[0].innerText = 'folder';
+            clickedFolder.nextSibling.setAttribute('class', 'display-none');
         }
     })
 }
