@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework 12 - Simple TODO List</title>
+    <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+<div id="root"></div>
+<section class="display-none">
+    <form action="/lol" id="addNewList">
+        <div class="">
+            <label for="newList">Enter name for list</label>
+            <input id="newList" type="text" placeholder="List name" required>
+        </div>
+        <button type="button" id="addTermDefButton" class="btn-style">Add term and definition</button>
+        <div class="addItem display-none">
+            <input class="terms" name="term" type="text" placeholder="Term">
+            <input class="definitions" name="def" type="text" placeholder="Definition">
+        </div>
+        <button type="submit" id="btnAddSet" class="btn-style">Add set</button>
+    </form>
+</section>
+
+<section class="display-none ">
+    <div class="show-sets">
+        <button type="button" id="btnGetAddSet" class="btn-style main-add-btn">Add set</button>
+        <ul id="listItems">
+
+        </ul>
+    </div>
+</section>
+<script src="./src/app.js"></script>
+</body>
+</html>

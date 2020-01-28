@@ -1,0 +1,97 @@
+body {
+    font-family: "Roboto Light", sans-serif;
+}
+
+input[type='text'] {
+    width: 50vw;
+    height: 10vh;
+    border: none;
+    border-bottom: 1px solid #cdcdcd;
+    margin: 10px;
+    outline: none;
+    font-size: 30px;
+}
+
+input[type='text']:focus {
+    border-bottom: 1px solid cornflowerblue;
+}
+
+input::placeholder{
+    color: #d8d8d8;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    background: #b7e5c6;
+    height: 60px;
+    width: 50%;
+    margin-top: 10px;
+    padding-left: 30px;
+    border-radius: 10px;
+}
+
+li:hover {
+    background: #c6f7d5;
+    transition-duration: 0.2s;
+}
+
+form {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 50%;
+}
+
+.addItem {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-style{
+    margin-top: 10px;
+    width: 150px;
+    height: 50px;
+    font-size: 30px;
+    background: transparent;
+    border-radius: 10px;
+    color: cornflowerblue;
+    border: 1px solid cornflowerblue;
+    cursor: pointer;
+}
+.btn-style:hover{
+    transition-duration: 0.2s;
+    background: #b6e2ff;
+}
+.btn-style:focus{
+    outline: none;
+}
+.btn-style:active{
+    transform: scale(0.95);
+    transition-duration: 0.2s;
+}
+.display-none{
+    display: none;
+}
+
+#listItems {
+    min-width: 50vw;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 20%;
+}
+#listItems li{
+    width: 60vw;
+}
+
+.main-add-btn{
+    position: absolute;
+    top: 30px;
+    right: 50px;
+}
