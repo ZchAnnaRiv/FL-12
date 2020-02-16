@@ -1,0 +1,145 @@
+@import 'variables.less';
+
+.colored-header {
+    margin-top: 40px;
+    color: @blue-color;
+    border-bottom: 1px solid @blue-color;
+    padding-bottom: 10px;
+}
+
+.gallery-colors(@color) {
+    background: @color;
+    border: 1px solid @color;
+}
+
+.nav__item {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+
+    &:hover {
+        transition-duration: 0.5s;
+        background: @blue-color;
+    }
+}
+
+.nav__link:hover {
+    color: #ffffff !important;
+}
+
+.article {
+    &__header {
+        .colored-header();
+        font-size: 45px;
+    }
+
+    &__img {
+        margin-top: 20px;
+        overflow: hidden;
+        max-width: 720px;
+
+        @media (max-width:@tablet) {
+            max-width: 480px;
+        }
+
+        @media (max-width: @mobile) {
+            max-width: @mobile;
+        }
+
+        &article__img--size {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__container {
+        @media (min-width:@tablet) {
+            display: inline-flex;
+        }
+    }
+
+    &__description {
+        margin-top: 30px;
+
+        @media (min-width:@tablet) {
+            max-width: 350px;
+            margin-left: 50px;
+
+        }
+
+        &--header {
+            color: @blue-color;
+        }
+
+        &--content {
+            font-size: 17px;
+        }
+    }
+}
+
+.gallery {
+    &__header {
+        .colored-header();
+    }
+
+    &__wrap {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        gap: 3%;
+
+        @media (max-width: @mobile) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+
+    }
+}
+
+.card {
+    width: 250px;
+    overflow: hidden;
+    border-radius: 0;
+    width: 100%;
+
+    &__img--size {
+        width: 100%;
+    }
+
+    &__description {
+        margin-top: 10px;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    &--color1 {
+        .gallery-colors(@red-color);
+    }
+
+    &--color2 {
+        .gallery-colors(@blue-color);
+    }
+
+    &--color3 {
+        .gallery-colors(@orange-color);
+    }
+
+    &--color4 {
+        .gallery-colors(@green-color);
+    }
+
+}
+
+.footer {
+    margin-top: 30px;
+
+    &__text {
+        background: @grey-color;
+        height: 50px;
+        padding-top: 12px;
+        padding-left: 15px;
+        font-size: 18px;
+        color: #ffffff;
+    }
+}
