@@ -65,7 +65,18 @@ class Employee {
     changeSalary(newSalary) {
         this.salary = newSalary;
     }
-
+    
+    getPromoted(benefits){
+        if(benefits.salary){
+            this.changeSalary(benefits.salary);
+        }
+        if(benefits.position){
+            this.changePosition(benefits.position);
+        }
+        if(benefits.department){
+            this.changeDepartment(benefits.department);
+        }
+    }
 }
 
 
