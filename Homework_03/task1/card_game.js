@@ -32,25 +32,29 @@ class Card {
 
 //class deck
 
-
+const _count = Symbol('count');
 class Deck {
     constructor() {
         this.cards = (function createCards() {
             let CardArr = [];
             let CardNames = ['Hearts', 'Diamonds', 'Clubs', 'Spides'];
-            for (var j = 0; j < 4; j++) {
-                for (var i = 1; i < 14; i++) {
+            for (let j = 0; j < 4; j++) {
+                for (let i = 1; i < 14; i++) {
                     let card = new Card(i, CardNames[j]);
                     CardArr.push(card);
                 }
             }
             return CardArr;
         })();
-        this.count = this.cards.length;
+        this[_count] = this.cards.length;
     }
 
-    get count(){
-        return this.count;
+    get count() {
+        return this[_count];
+    }
+
+    set count(param) {
+        throw new Error('This property is readonly');
     }
 
     shuffle() {
@@ -82,6 +86,12 @@ class Player {
         this.name = name;
         this.deck = deck;
         this[_wins] = wins;
+    }
+    get wins() {
+        return this[_wins];
+    }
+    set wins(param) {
+        throw new Error('This property is readonly');
     }
 
     Play(secondPlayer) {
